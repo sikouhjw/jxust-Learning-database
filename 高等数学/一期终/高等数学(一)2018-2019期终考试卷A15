@@ -61,7 +61,7 @@
 	\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdot\frac{n-5}{n-4}\cdots\frac{2}{3}, & n\text{为大于}1\text{的奇数}\\
 	\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdots\frac{1}{2}\cdot\frac{\uppi}{2}, & n\text{为正偶数}
 	\end{cases},
-	$$
+	$$ 
 	求星形线$
 	\begin{cases}
 	x=a\cos^3t\\
