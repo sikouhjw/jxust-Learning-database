@@ -1,0 +1,20 @@
+CREATE TRIGGER stu_ti
+   on student for insert,update
+   as print '插入或更新了student库'
+或  
+CREATE TRIGGER stu_ti
+    on student AFTER insert,update
+   as print '插入或更新了student库'
+
+--------------------------------------
+CREATE TRIGGER stu_hx
+   on Student for insert,update
+   AS BEGIN
+       update student set sdept='EN' where sno='201301023';
+       select * from student;
+   END
+
+---------------------------------------
+UPDATE  Student
+         SET Sage=15
+         WHERE  Sno='201301023'
