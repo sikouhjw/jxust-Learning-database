@@ -1,0 +1,77 @@
+C51 COMPILER V9.01   MAIN                                                                  02/16/2016 10:34:47 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***************************************************************************
+   2          标题：  DS1302时钟程序1
+   3          实验板：电子时钟套件
+   4          作者：  
+   5          客服QQ：
+   6          邮箱：  
+   7          说明：  简单的显示时分
+   8          ******************************************************************************/
+   9          
+  10          //头文件:
+  11          #include <reg52.h>
+  12          #include "SMG4.h"
+  13          #include "DS1302.h"
+  14          
+  15          //变量定义
+  16          unsigned char ly_timer[7]={0,20,12,9,7,4,15};   //0秒，20分，12时，9日，7月，星期4，15年                        
+  17                                                          //用于读时间信息缓冲，初值为第一次的写入时间                                    
+  18          
+  19          //主函数        
+  20          void main(void)  
+  21          {
+  22   1              unsigned char oldT,DisUp=1;     //做为时间更新的显示的控制
+  23   1              
+  24   1              RST=0;                                  //DS1302的RST是低电平复位，因此将其关闭
+  25   1              
+  26   1              Set_RTC(ly_timer);              //写时间，芯片初始化需要先写入时间进行测试，非测试时此行去掉。
+  27   1                      
+  28   1              while(1){               
+  29   2                      if(DisUp){                              //更新显示时间
+  30   3                              DisUp=0;
+  31   3                              Read_RTC(ly_timer,4);                                           //读秒时分，其它时间信息没用到，所以不用读取
+  32   3                                      
+  33   3                              ly_SMGbuf[0]=ly_timer[2]/16;            //提取小时的个位和十位，存入显示缓冲待显示
+  34   3                              ly_SMGbuf[1]=ly_timer[2]&0x0f;  //为什么不是除以10，这里一定注意，读出来的是BCD十进制码
+  35   3                              ly_SMGbuf[2]=ly_timer[1]/16;            //提取分种的个位和十位，存入显示缓冲待显示
+  36   3                              ly_SMGbuf[3]=ly_timer[1]&0x0f;
+  37   3                      }
+  38   2                      
+  39   2                      Read_RTC(ly_timer,1);                                   //读时间信息秒  
+  40   2                      if(ly_timer[0]!=oldT)                           //秒跳变更新中间点闪烁
+  41   2                      {
+  42   3                              oldT=ly_timer[0];
+  43   3                              ly_SMGcp[1]=oldT&0x01;                  //获取秒的第0位来让中间两个小数点闪烁
+  44   3                              ly_SMGcp[2]=ly_SMGcp[1];
+  45   3                              if(oldT==0)                                                                     //秒归0时更新时间显示
+  46   3                                      DisUp=1;
+  47   3                      }               
+  48   2                      
+  49   2                      DisPlayS(100);  //调用显示函数
+  50   2              }
+  51   1      }
+  52          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.01   MAIN                                                                  02/16/2016 10:34:47 PAGE 2   
+
+   CODE SIZE        =    511    ----
+   CONSTANT SIZE    =     14    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     35      15
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

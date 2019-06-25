@@ -1,0 +1,78 @@
+C51 COMPILER V9.01   SMG                                                                   12/16/2015 10:13:57 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SMG
+OBJECT MODULE PLACED IN SMG.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE SMG.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***************************************************************************
+   2          ±êÌâ£º  ÊýÂë¹ÜµÄÏÔÊ¾
+   3          ÊµÑé°å£ºLY51-SZ1¿ª·¢°å
+   4          ×÷Õß£º  ÀñÒÚµç×Ó-µ¥Æ¬»ú
+   5          ¿Í·þQQ£º52927029
+   6          ÓÊÏä£º  52927029@qq.com
+   7          ËµÃ÷£º  ¾²Ì¬ÏÔÊ¾Ò»Î»ÊýÂë¹Ü,ÏÔÊ¾0¡«9
+   8          ******************************************************************************/
+   9          
+  10          //Í·ÎÄ¼þ:
+  11          #include <reg52.h>
+  12          
+  13          //³£Á¿¶¨Òå:
+  14          unsigned char code table[]=
+  15                                  {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+  16                                                  //±í£º¹²ÑôÊýÂë¹Ü 0-9 
+  17                                  
+  18          //Òý½Å¶¨Òå:             
+  19          sbit SMG_q = P3^2;      //¶¨ÒåÊýÂë¹ÜÑô¼¶¿ØÖÆ½Å£¨Ç§Î»£©
+  20          sbit SMG_b = P3^3;      //¶¨ÒåÊýÂë¹ÜÑô¼¶¿ØÖÆ½Å£¨°ÙÎ»£©
+  21          sbit SMG_s = P3^4;      //¶¨ÒåÊýÂë¹ÜÑô¼¶¿ØÖÆ½Å£¨Ê®Î»£©
+  22          sbit SMG_g = P3^5;      //¶¨ÒåÊýÂë¹ÜÑô¼¶¿ØÖÆ½Å£¨¸öÎ»£©
+  23          
+  24          //º¯ÊýÉùÃ÷:
+  25          void delay(unsigned int t); //ÑÓÊ±×Óº¯Ê±£¬
+  26          
+  27          //Ö÷º¯Êý£¬CÓïÑÔµÄÈë¿Úº¯Êý:              
+  28          void main(void)  
+  29          {
+  30   1              unsigned char i;                //¶¨ÒåÑ­»·±äÁ¿
+  31   1              while(1)
+  32   1              {
+  33   2                      SMG_g=0;                        //Ñ¡Ôñ¸öÎ»ÊýÂë¹Ü£¬ÕâÊÇ¾²Ì¬ÏÔÊ¾£¬P0¿ÚÊä³öÏÔÊ¾£¬²»ÐèÒªË¢ÐÂ£¬Ò²¿ÉÑ¡ÔñÇ§Î»¡¢°ÙÎ»»ò¸öÎ»£¬×¢ÒâÊ®Î»Ê
+             -Ç·´ÏòµÄ£¬ÏÔÊ¾ÖµÊÇµ¹¹ýÀ´µÄ;
+  34   2                                                                              //Ò²¿ÉÁ½Î»»òÈ«²¿Í¬Ê±Êä³öÏÔÊ¾
+  35   2                      for(i=0;i<10;i++)       //Ñ­»·ÏÔÊ¾0¡«9
+  36   2                      {               
+  37   3                              P2=table[i];    //²é±íÊä³öÊýÂë¹Ü¶ÎÖµ¸øP0¿Ú£¬ÏÔÊ¾ÏàÓ¦µÄ0-9
+  38   3                              delay(2000);    //ÑÓÊ±
+  39   3                      }
+  40   2              }
+  41   1      }
+  42          
+  43          //ÑÓÊ±×Óº¯Êý,²ÎÊý·¶Î§ 0¡«65535
+  44          void delay(unsigned int t)
+  45          {
+  46   1              unsigned char j;
+  47   1              
+  48   1              while(t--){             
+  49   2                      j=255;
+  50   2                      while(j--);             
+  51   2              }
+  52   1      }
+
+
+C51 COMPILER V9.01   SMG                                                                   12/16/2015 10:13:57 PAGE 2   
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     52    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

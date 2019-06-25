@@ -1,0 +1,58 @@
+C51 COMPILER V9.01   MAIN                                                                  12/16/2015 10:02:12 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***************************************************************************
+   2          ±êÌâ£º  °´¼ü¿ØÖÆ¼ÌµçÆ÷
+   3          ÊµÑé°å£ºÊý×ÖÊ±ÖÓÌ×¼þ
+   4          ×÷Õß£º  
+   5          ¿Í·þQQ£º
+   6          ÓÊÏä£º  
+   7          ËµÃ÷£º  ±¾³ÌÐòÖ±½Ó²ÉÓÃ·ÖÊ±É¨Ãè·¨£¬±¾°åÉè¼ÆÁË2¸ö°´¼ü£¬·Ö±ð½ÓÓÚP31ºÍP30Òý½Å£¬°´¼ü¶¼ÒÔ½Ó0·½Ê½´¥·¢£¨¼´°´¼üÁíÒ»½
+             -Å½ÓGND£©
+   8          ******************************************************************************/
+   9          //Í·ÎÄ¼þ:
+  10          #include <reg52.h>
+  11          
+  12          //Òý½Å¶¨Òå:
+  13          sbit S1 = P3^1; //¶¨Òå°´¼ü1
+  14          sbit S2 = P3^0; //¶¨Òå°´¼ü2
+  15          
+  16          sbit JDQ = P1^5;        //¼ÌµçÆ÷¿ØÖÆÒý½Å
+  17          
+  18          
+  19          //Ö÷º¯Êý£¬CÓïÑÔµÄÈë¿Úº¯Êý:      
+  20          void main(void)
+  21          {
+  22   1              while(1){               //Ñ­»·É¨Ãè°´¼ü
+  23   2                      if(S1==0)       //°´¼ü1°´ÏÂ£¬·äÃùÆ÷Æô¶¯
+  24   2                      {
+  25   3                              JDQ=0;JDQ=1;JDQ=0;
+  26   3                       }
+  27   2                      if(S2==0)       //°´¼ü2°´ÏÂ£¬·äÃùÆ÷¹Ø±Õ
+  28   2                      {
+  29   3                              JDQ=1;JDQ=0;JDQ=1;
+  30   3                       }
+  31   2              }
+  32   1      }
+  33            
+  34          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     20    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

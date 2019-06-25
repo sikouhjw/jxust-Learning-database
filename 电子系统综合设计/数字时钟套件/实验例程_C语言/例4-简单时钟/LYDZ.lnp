@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"main.obj" 
+TO "LYDZ" 
+RAMSIZE(256) 

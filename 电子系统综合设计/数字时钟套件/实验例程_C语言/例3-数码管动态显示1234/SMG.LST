@@ -1,0 +1,94 @@
+C51 COMPILER V9.01   SMG                                                                   12/16/2015 10:20:24 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SMG
+OBJECT MODULE PLACED IN SMG.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil\C51\BIN\C51.EXE SMG.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /***************************************************************************
+   2          标题：  数码管的显示
+   3          实验板：数字时钟套件
+   4          作者：
+   5          客服QQ：
+   6          邮箱：  
+   7          说明：  显示1234,从这个例子可以学习多位数码管的动态显示技术
+   8          ******************************************************************************/
+   9          
+  10          //头文件:
+  11          #include <reg52.h>
+  12          
+  13          //常量定义:
+  14          unsigned char code table[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+  15          //表：共阳数码管 0～9 
+  16          
+  17          unsigned char code table2[]={0xc0,0xcf,0xa4,0x86,0x8b,0x92,0x90,0xc7,0x80,0x82};
+  18          //表2：共阳数码管 0～9，因第三位数码管是反过来安装的，因此与上面的显示值有所不同
+  19          
+  20          //引脚定义:             
+  21          sbit SMG_q = P3^2;      //定义数码管阳级控制脚（千位）
+  22          sbit SMG_b = P3^3;      //定义数码管阳级控制脚（百位）
+  23          sbit SMG_s = P3^4;      //定义数码管阳级控制脚（十位）
+  24          sbit SMG_g = P3^5;      //定义数码管阳级控制脚（个位）
+  25          
+  26          //函数声明:
+  27          void delay(unsigned char i); //延时子函时
+  28          void display(void);//显示函数
+  29                                  
+  30          
+  31          //主函数，C语言的入口函数:              
+  32          void main(void)  
+  33          {
+  34   1              unsigned char i=0;      //作为查表的索引号
+  35   1              while(1)                                //不停的循环扫描,不扫描则不显示或显示不正确，即为动态显示,
+  36   1              {                       
+  37   2                      display();              //调用数码管显示 1234，可自行修改
+  38   2              }
+  39   1      }
+  40          
+  41          //延时子函数,短暂延时
+  42          void delay(unsigned char i)
+  43          {
+  44   1              while(i--);
+  45   1      }
+  46          
+  47          //显示函数
+  48          void display(void)
+  49          {
+  50   1                      P2=table[1];    //查找"1"定义好的数码管段值与P0口输出，显示相应的1
+  51   1                      SMG_q=0;                        //选择千位数码管
+  52   1                      delay(20);                      //加入短暂延时，延时可控制刷新频率
+  53   1                      SMG_q=1;                        //关闭千位数码管
+  54   1      
+  55   1                      P2=table[2];    //查找"2"定义好的数码管段值与P0口输出，显示相应的2
+C51 COMPILER V9.01   SMG                                                                   12/16/2015 10:20:24 PAGE 2   
+
+  56   1                      SMG_b=0;                        //选择百位数码管
+  57   1                      delay(20);
+  58   1                      SMG_b=1;
+  59   1                      
+  60   1                      P2=table2[3];   //注意这里的第十位数码管是反向安装的，所以取的是第二个表的值
+  61   1                      SMG_s=0;                        //选择十位数码管
+  62   1                      delay(20);
+  63   1                      SMG_s=1;
+  64   1      
+  65   1                      P2=table[4];
+  66   1                      SMG_g=0;                        //选择个位数码管
+  67   1                      delay(20);
+  68   1                      SMG_g=1;
+  69   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     78    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
