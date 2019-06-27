@@ -1,1 +1,1 @@
-最新版详见Engineering-mathematics-sunflower-treasure-book
+最新版详见https://github.com/sikouhjw/Engineering-mathematics-sunflower-treasure-book
