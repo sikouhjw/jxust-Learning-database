@@ -6,4 +6,4 @@
 
 部分 LaTeX 排版的试卷代码已给出
 
-最新版详见[Mathematical-rearrangement](https://github.com/sikouhjw/Mathematical-rearrangement)
+最新版详见https://github.com/sikouhjw/Engineering-mathematics-sunflower-treasure-book
