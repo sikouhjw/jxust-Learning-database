@@ -4,8 +4,7 @@
 [![Stars](https://img.shields.io/github/stars/sikouhjw/jxust-Learning-database.svg)](https://github.com/sikouhjw/jxust-Learning-database/stargazers)
 [![Forks](https://img.shields.io/github/forks/sikouhjw/jxust-Learning-database.svg)](https://github.com/sikouhjw/jxust-Learning-database/network/members)
 ![GitHub repo size](https://img.shields.io/github/repo-size/sikouhjw/jxust-Learning-database.svg)
-[![Issues](https://img.shields.io/github/issues/sikouhjw/jxust-Learning-database.svg)]()
-![GitHub pull requests](https://img.shields.io/github/issues-pr/sikouhjw/jxust-Learning-database.svg)
+
 
 ## jxust-Learning-database详细说明
 
