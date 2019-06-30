@@ -6,3 +6,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/sikouhjw/jxust-Learning-database.svg)
 [![Issues](https://img.shields.io/github/issues/sikouhjw/jxust-Learning-database.svg)]()
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/sikouhjw/jxust-Learning-database.svg)
+
+## jxust-Learning-database详细说明
+
+jxust-Learning-database的内容为江西理工大学所开设的各类课程，以一个课程一个文件夹为组织方式；当然不止于课程的资料，还有**[考研资料](./考研资料/)**，内容为我校及其他几所学校的真题。
