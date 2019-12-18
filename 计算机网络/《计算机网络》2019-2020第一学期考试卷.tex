@@ -1,0 +1,154 @@
+\documentclass{ctexart}
+\usepackage{siunitx}
+% \usepackage[
+% paperwidth=13cm,
+% paperheight=17.33cm,
+% top=0.2cm,bottom=0.5cm,
+% left=0.2cm,right=0.2cm,
+% footskip=13pt
+% ]{geometry}
+\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=2cm,right=2cm]{geometry}
+
+\usepackage{theorem}
+{
+	\theoremstyle{change}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\newtheorem{ti}{}[section]
+}
+\renewcommand{\theti}{\arabic{ti}.}
+
+\usepackage{paralist}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\def\hua{\uline{\hspace*{\fill}}}
+\def\huahua{\uline{\hspace*{5pc}}}
+
+
+\title{《计算机网络》2019-2020 第一学期考试卷\thanks{试卷编号：1920010757A}}
+\author{秦淑雅}
+\begin{document}
+\pagestyle{plain}
+\maketitle
+\section{填空题（每空 $1$ 分，共 $30$ 分）}
+\begin{ti}
+	常见的交换技术有三种，分别为：\hua、\hua 和\hua．
+\end{ti}
+
+\begin{ti}
+	TCP/IP 采用四层协议的体系结构，从高层往低层顺序为：\hua、\\\hua、\hua 和\hua．
+\end{ti}
+
+\begin{ti}
+	网络适配器所实现的功能包含了：\hua 和\hua 这两个层次的功能．
+\end{ti}
+
+\begin{ti}
+	与 IP 协议配套使用的三个协议是：\hua、\hua 和\hua．
+\end{ti}
+
+\begin{ti}
+	集线器工作在\hua．
+\end{ti}
+
+\begin{ti}
+	电磁波在 \SI{1}{KM} 电缆的传播时延约为：\hua．
+\end{ti}
+
+\begin{ti}
+	因特网有两大类路由选择协议：\hua 和\hua．
+\end{ti}
+
+\begin{ti}
+	运输层为\hua 之间提供端到端的逻辑通信，网络层是为\hua 之间提供逻辑通信．
+\end{ti}
+
+\begin{ti}
+	TCP 传送的数据单位协议是\hua，UDP 传送的数据单位协议是\hua．
+\end{ti}
+
+\begin{ti}
+	以太网规定了最短有效帧长为\hua 字节．
+\end{ti}
+
+\begin{ti}
+	发送邮件的协议：\hua，读取邮件的协议：\hua．
+\end{ti}
+
+\begin{ti}
+	802.11 是无线以太网的标准，在 MAC 层使用\hua，凡使用 802.11 系列的局域网称为\hua．
+\end{ti}
+
+\begin{ti}
+	Internet 的本地接入中，采用拨号方式时使用的传输介质是\huahua，采用有限电视网方式时使用的传输介质是\hua．
+\end{ti}
+
+\begin{ti}
+	将数字数据调制成模拟信号进行传输，通常有三种基本方式：\hua、\hua 和\hua．
+\end{ti}
+
+\section{简答题（共 $30$ 分）}
+\begin{ti}
+	请具体描述计算机网络体系结构．（10分）
+\end{ti}
+
+\begin{ti}
+	请描述计算机网络中的时延．（8分）
+\end{ti}
+
+\begin{ti}
+	名词解释 VPN、CIDR、MTU、RIP、RTT、OSI/RM．（6分）
+\end{ti}
+
+\begin{ti}
+	请描述路由器的构成．（6分）
+\end{ti}
+
+\section{计算题（共 $40$ 分）}
+\begin{ti}
+	设收到的信息码字为 110111，检查和 CRC 为 1011，生成多项式为：$G(x) = X^{4} + X^{3} + 1$，请问收到的信息有错吗，为什么？采用 CRC 检验后，数据链路层的传输是否变成了可靠的传输？（12分）
+\end{ti}
+
+\begin{ti}
+	已知地址块中的一个地址是 140.120.84.24/20．计算这个地址块中的最小地址和最大地址．地址掩码是什么？地址块中共有多少个地址？相当于多少个 C 类地址？（10分）
+\end{ti}
+
+\begin{ti}
+	以下的地址前缀中的哪一个地址与 2.52.90.140 匹配？请写出计算过程．（8分）
+
+	\begin{inparaenum}
+		\item 0/4；
+		\item 32/4；
+		\item 4/6；
+		\item 80/4
+	\end{inparaenum}
+\end{ti}
+
+\begin{ti}
+	设某路由器建立了如下路由表．（10分）
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			目的网络 & 子网掩码 & 下一跳 \\
+			\hline
+			130.112.50.0 & 255.255.255.0 & R\textsubscript{0} \\
+			\hline
+			160.35.30.128 & 255.255.255.128 & R\textsubscript{1} \\
+			\hline
+			156.104.68.0 & 255.255.255.0 & R\textsubscript{2} \\
+			\hline
+			192.22.163.0 & 255.255.255.192 & R\textsubscript{3} \\
+			\hline
+			*(默认) & --- & R\textsubscript{4} \\
+			\hline
+		\end{tabular}
+	\end{center}
+	现共收到 2 个分组，其目的站 IP 地址分别为：
+	\begin{enumerate}
+		\item 156.104.68.112
+		\item 172.63.200.24
+	\end{enumerate}
+	试分别计算其下一跳，并写出计算过程．
+\end{ti}
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass{ctexart}
+\usepackage{amsmath,amsthm,siunitx}
+\usepackage{ulem}
+\usepackage[a4paper,margin=1in]{geometry}
+\theoremstyle{definition}
+\newtheorem{ti}{}[section]
+\def\theti{\arabic{ti}}
+\def\hua{\uline{\hspace*{4pc}}}
+
+\title{《DSP 原理及应用》2018-2019第二学期考试卷\thanks{试卷编号：1819020616B}}
+\author{秦淑雅}
+\begin{document}
+	\pagestyle{plain}
+	\maketitle
+	\section{填空题（$40$ 分）}
+	\begin{ti}
+		配置 IO 口工作于外设功能或数字 IO 功能的寄存器是\hua，复位时所有 GPIO 配制成\hua 功能状态；配置 IO 口方向的寄存器是\hua，复位时所有 GPIO 为\hua（输入/输出）状态。
+	\end{ti}
+
+	\begin{ti}
+		X2812xDSP 的中断向量表地址由\hua、\hua、\hua、\hua 信号控制。
+	\end{ti}
+
+	\begin{ti}
+		复位时\hua 引脚被采样为低电平，锁相环被禁止；\hua 引脚是功率保护引脚，下降沿引发功率驱动保护中断将 EVA 的 PWM 输出引脚置为高阻态。
+	\end{ti}
+
+	\begin{ti}
+		T1 的 TMS320X281X 系列 DSP 为了保护关键寄存器，在对这些特殊寄存器改写之前要执行汇编指令“asm（“\hua”）”以置位 ST1 的 D6 位，设置寄存器执行之后要执行“asm（“\hua”）”以清除 ST1 的 D6 位；这些需要保护的特殊功能寄存器是\hua、\hua、\hua、\hua、\hua、\hua、\hua。
+	\end{ti}
+
+	\begin{ti}
+		通用定时器的比较单元产生高有效的 PWM 对称波形时占空比公式为\hua。
+	\end{ti}
+
+	\begin{ti}
+		定期“喂狗”实际就是周期性向\hua 寄存器写入\hua+\hua。
+	\end{ti}
+
+	\begin{ti}
+		记录引脚电平跳变时刻可以用事件管理器的\hua 单元。
+	\end{ti}
+
+	\begin{ti}
+		语句“\hua”将 ADC 的寄存器变量 AdcRegs 定位到 AdcRegsFile 段中。
+	\end{ti}
+
+	\begin{ti}
+		A/D 初始化函数文件名为\hua；CPU 定时器配置函数为\hua。
+	\end{ti}
+
+	\begin{ti}
+		可执行文件后缀是*.\hua，链接命令文件后缀是*.\hua。
+	\end{ti}
+
+	\begin{ti}
+		定时器比较匹配事件时 TxPWM/TxCMP 引脚由低电平跳变到高电平则该引脚的输出极性模式为\hua。
+	\end{ti}
+
+	\begin{ti}
+		使能捕获单元 1 和 2，需要写指令 EvaRegs.\hua.\hua.CAP12PN=1。
+	\end{ti}
+
+	\begin{ti}
+		TMS320X2812 扩展片外数据存储器选择 XINTF6 区，起始地址是\hua，存储器片选信号与 DSP 的\hua 引脚相连接。
+	\end{ti}
+
+	\begin{ti}
+		为使外设中断被响应后 PIE 控制器能响应同组的其他中断要对\hua 的相关位进行手动复位，即对相应位写\hua。
+	\end{ti}
+
+	\begin{ti}
+		\hua 文件中有一个函数\uline{\hspace*{4pc}（函数名）}实现对外设中断扩展模块 PIE 控制寄存器进行初始化。
+	\end{ti}
+
+	\begin{ti}
+		INT1.5 是\hua 中断。
+	\end{ti}
+
+	\begin{ti}
+		设置全比较单元引脚输出极性的寄存器为\hua。
+	\end{ti}
+
+	\section{简答题（$10 \times 3$）分}
+	\begin{ti}
+		使捕获单元工作需要进行什么设置？详细说明 CAPFIFOA 的 D9D8 位作用。
+	\end{ti}
+
+	\begin{ti}
+		已知使用的晶体振荡器频率，需要设置哪些寄存器，确定通用定时器的时钟基准（定时器计数一个节拍的时钟周期）。
+	\end{ti}
+
+	\begin{ti}
+		使通用定时器 T1、T2 同步的设置步骤。
+	\end{ti}
+
+	\section{编程题（$10 + 20$ 分）}
+	\begin{ti}
+		外部晶振频率为 \SI{30}{MHz}，希望得到 SYSCLKOBT 为 \SI{150}{MHz}，高速外设时钟为 \SI{75}{MHz}，低速外设时钟为 \SI{37.5}{MHz}，禁止看门狗使用 EVA、ADC 以及 SP1 外设，写出系统初始化程序。
+		\begin{verbatim}
+			#include"_________"
+			/*功能：对 F2812 系统控制寄存器初始化
+			入口参数：无
+			出口参数：无*/
+		\end{verbatim}
+	\end{ti}
+
+	\begin{ti}
+		使用通用定时器 1 每隔 \SI{1}{ms} 发生一次中断，在 GPIOB0 引脚上产生周期 \SI{0.8}{s} 的方波（400 次中断电平跳变一次）；在高速外设时钟为 \SI{75}{MHz} 的设定下，分模块写出通用定时器 1 的初始化设置函数，系统初始化调用和中断初始化设置，引脚初始化函数，中断服务函数。
+	\end{ti}
+\end{document}

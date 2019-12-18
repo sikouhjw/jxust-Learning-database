@@ -1,0 +1,234 @@
+\documentclass{ctexart}
+\usepackage{amsmath}
+\let\lvert\relax
+\let\rvert\relax
+\let\lVert\relax
+\let\rVert\relax
+\usepackage{fourier}
+\usepackage{siunitx}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{ntheorem}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,inner=1.5cm,outer=1.5cm]{geometry}
+{
+	\theoremstyle{change}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\newtheorem{ti}{}[section]
+}
+\renewcommand{\theti}{\arabic{ti}.}
+\setCJKmainfont{SourceHanSerifCN}[
+UprightFont    = *-Regular,
+BoldFont       = *-Bold,
+ItalicFont     = *-Regular,
+BoldItalicFont = *-Bold
+]
+\title{《电气设备及 PLC 技术》填空题题库}
+\author{死抠}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section{电气控制基础}
+
+\begin{ti}
+	熔断器又叫保险丝，用于电路的\uline{短路}保护，使用时应\uline{串联}接在电路中。
+\end{ti}
+
+\begin{ti}
+	交流接触器主要由\uline{触头系统}、\uline{电磁系统}和\uline{灭弧装置}组成。
+\end{ti}
+
+\begin{ti}
+	交流接触器为了减小铁心的振动和噪音，在铁心上加入\uline{短路环}。接触器的额定电流指\uline{主触点}的额定电流。
+\end{ti}
+
+\begin{ti}
+	在交流接触器的铁芯上一定要安装\uline{短路环}，目的是\uline{减少(消除)铁芯震动和噪音}。
+\end{ti}
+
+\begin{ti}
+	接触器用来分断正常的工作电流，熔断器来分断\uline{短路}电流，磁吹式灭弧装置多用于\uline{直流}接触器，带灭弧栅的灭弧装置多用于\uline{交流}接触器。
+\end{ti}
+
+\begin{ti}
+	热继电器是利用\uline{电流}流过发热元件产生热量来使检测元件受热弯曲，进而推动机构动作的一种保护电器，主要被用作电动机的长期\uline{过载}保护。
+\end{ti}
+
+\begin{ti}
+	热继电器是专门用来对连续运行的电动机实现\uline{过载}及\uline{缺相(断相)}保护，以防电动机因过热而烧毁的一种保护电器，通常是把其\uline{热继电器常闭}触点串接在控制电路中。
+\end{ti}
+
+\begin{ti}
+	通常电压继电器\uline{并}联在电路中，电流继电器\uline{串}联在电路中。电磁式中间继电器实质上是一种电磁式\uline{电压}继电器。
+\end{ti}
+
+\begin{ti}
+	电流继电器线圈匝数\uline{少}、导线\uline{粗}、阻抗\uline{小}，动作灵敏，触点容量小，且只有一个触点。
+\end{ti}
+
+\begin{ti}
+	在机床电控中，短路保护用\uline{熔断器}，过载保护用\uline{热继电器}。
+\end{ti}
+
+\begin{ti}
+	要实现电动机的多地点控制，应把所有的启动按钮\uline{并联}连接，所有的停机按钮\uline{串联}连接。
+\end{ti}
+
+\begin{ti}
+	欲使接触器 KM1 动作后接触器 KM2 才能动作，需要在\uline{KM2}的线圈回路中串入\uline{KM1}的常开触点。
+\end{ti}
+
+\begin{ti}
+	机床上常用的电气制动控制线路有两种即\uline{反接制动}和\uline{能耗制动}，速度继电器主要用作\uline{反接制动}控制。
+\end{ti}
+
+\begin{ti}
+	笼型异步电动机减压起动通常有\uline{定子绕组串电抗}、\uline{自耦变压}、延边三角形起动。
+\end{ti}
+
+\begin{ti}
+	对于正常运行在\uline{$\triangle$ 形}连接的电动机，可采用星-三角形降压启动，即起动时，定子绕组先接成\uline{Y 形}，当转速上升到接近额定转速时，将定子绕组连接方式改接成\uline{$\triangle$ 形}，使电动机进入\uline{正常}运行状态。
+\end{ti}
+
+\section{可编程序控制器概述}
+
+\begin{ti}
+	PLC 通过\uline{I/O 模块}实现与现场信号的联系，对用户程序的解释和执行。由\uline{CPU}单元完成。
+\end{ti}
+
+\begin{ti}
+	PLC 重复执行输入采样阶段、\uline{执行用户程序}和\uline{输出刷新}三个阶段，每重复一次的时间称为一个\uline{扫描周期}。
+\end{ti}
+
+\begin{ti}
+	PLC 以晶体管作为输出时，其负载的电源为\uline{直}流。
+\end{ti}
+
+\begin{ti}
+	对于低速、大功率的负载，一般应选用\uline{继电器}输出的输出接口电路；对于高速、大功率的交流负载，一般应选用\uline{晶闸管}输出的输出接口电路。
+\end{ti}
+
+\begin{ti}
+	PLC 采用\uline{循环扫描}工作方式。
+\end{ti}
+
+\begin{ti}
+	可编程控制器的数字量输出类型一般分为\uline{继电器输出}、\uline{晶体管输出}、\uline{模拟量输出}三种。
+\end{ti}
+
+\begin{ti}
+	S7-300 PLC 的电源模块为背板总线提供的电压是\uline{\mbox{\SI{5}{V}}}，数字量输出模块 SM322 按照工作原理分为：晶体管输出型\uline{直流}负载、晶闸管输出型\uline{交流}负载、继电器输出型\uline{交直流}负载。
+\end{ti}
+
+\begin{ti}
+	可编程控制器中输出模块的功率放大元件有驱动交流负载的\uline{双向晶闸管}，驱动直流负载的\uline{大功率晶体管和场效应管}，以及既可以驱动交流负载又可以驱动直流负载的\uline{小型继电器}。
+\end{ti}
+
+\begin{ti}
+	输入采样阶段，PLC 的 CPU 对各输入端子进行扫描，将输入信号送入\uline{映像寄存器}，PLC 的位元件采用\uline{八}进制进行编号。
+\end{ti}
+
+\section{S7 -- 300 PLC 硬件系统}
+
+\begin{ti}
+	S7 -- 300 PLC 电源模块总是在中央机架的\uline{1}号槽，CPU 模块只能在中央机架的\uline{2}号槽，接口模块只能在\uline{3}号槽。
+\end{ti}
+
+\begin{ti}
+	S7 -- 300 PLC 一个机架最多可安装\uline{8}个信号模块，最多可扩展\uline{3}个机架，接口模块只能在\uline{3}号槽。
+\end{ti}
+
+\begin{ti}
+	S7 -- 300 PLC 的模块中，IM 是\uline{接口}模块，CP 是\uline{通讯}模块，FM 是\uline{功能}模块。
+\end{ti}
+
+\begin{ti}
+	S7 -- 300 CPU 一般有三种工作模式(RUN、STOP、MRES)，其中 RUN 为\uline{运行}模式、STOP 为\uline{停止}模式、MRES 为\uline{存储器复位}模式。
+\end{ti}
+
+\section{S7 -- 300 PLC 的编程基础}
+
+\begin{ti}
+	MD40 中最低的 $8$ 位对应的字节是\uline{MB43}。
+\end{ti}
+
+\begin{ti}
+	在 STEP7 的基本数据类型中，“MD100”是\uline{双字}数据类型，最低有效字节为\uline{MB103}，“DBW20”是\uline{字}数据类型。
+\end{ti}
+
+\begin{ti}
+	在 STEP7 的基本数据类型中，DBD100 是\uline{双字}数据类型，最低有效字节为\uline{DBB103}，“QW20”是\uline{字}数据类型。
+\end{ti}
+
+\begin{ti}
+	在 STEP7 的基本数据类型中，MW200 是\uline{字}数据类型，最低有效字节为\uline{MB201}，DBD20 是\uline{双字}数据类型，最低有效字节为\uline{DBB23}。
+\end{ti}
+
+\begin{ti}
+	在 STEP7 的基本数据类型中，MD4 是\uline{双字}数据类型，最低有效字节为\uline{MB7}。
+\end{ti}
+
+\begin{ti}
+	SUB\_I 属于\uline{16}位操作指令，SHL\_W \uline{16}位操作指令，WOR\_DW \uline{32}位操作指令。
+\end{ti}
+
+\begin{ti}
+	ADD\_DI 属于\uline{32}位操作指令，SHR\_I \uline{16}位操作指令，WAND\_W \uline{16}位操作指令。
+\end{ti}
+
+\begin{ti}
+	S7--300 PLC DWORD(双字)是\uline{32}位\uline{无}符号数，DINT(整数)是\uline{32}位\uline{有}符号数。
+\end{ti}
+
+\begin{ti}
+	S7--300 PLC WORD(字)是\uline{16}位\uline{无}符号数，DINT(整数)是\uline{16}位\uline{有}符号数。
+\end{ti}
+
+\begin{ti}
+	S7--300 PLC 如果没有中断，CPU 循环执行是\uline{OB1}组织块。MD50 的最低有效字节是\uline{MB53}。
+\end{ti}
+
+\begin{ti}
+	RLO 是\uline{逻辑操作结果}的简称。
+\end{ti}
+
+\section{数据块和组织块}
+
+\begin{ti}
+	OB1 是\uline{主程序}组织块，OB40 是\uline{硬件中断}组织块，OB100 是\uline{启动}组织块，OB35 是\uline{循环中断}组织块。
+\end{ti}
+
+\begin{ti}
+	S7---300 PLC 如果没有中断，CPU 循环执行是\uline{OB1}组织块。CPU 检测到故障或错误时，如果没有下载对应的错误处理 OB，CPU 将进入\uline{STOP}。OB40 是\uline{硬件中断}组织块，OB35 是\uline{循环中断}组织块。
+\end{ti}
+
+\begin{ti}
+	生成程序时，自动生成的块是\uline{OB1}。PLC 的位元件采用\uline{八}进制进行编号。PLC 是以\uline{循环扫描}方式执行用户程序。
+\end{ti}
+
+\begin{ti}
+	S7---300 PLC 用户程序的入口是\uline{OB1}组织块。调用\uline{FB}和\uline{SFB}时需要指定其背景数据块。
+\end{ti}
+
+\begin{ti}
+	OB10 是\uline{日期时间中断}组织块，OB100 是\uline{启动}组织块，OB40 是\uline{硬件中断}组织块。
+\end{ti}
+
+\begin{ti}
+	在 STEP7 的基本数据类型中，5.0 是\uline{浮点数(或实数)}数据类型，L\#5是\uline{有符号双整数}数据类型，DBD30 最低有效字节为\uline{DBB33}。
+\end{ti}
+
+\begin{ti}
+	请给以下程序加上注解
+	\begin{center}
+		\begin{tabular}{l@{\hspace{2pc}//}l}
+			L DB1.DBW4 & \uline{将 DB1.DBW4 内容装入累加器 1}\\
+			T DB1.DBW2 & \uline{将累加器 1 的内容传送给 DB1.DBW2}\\
+			OPN DB2 & \uline{打开数据块 DB2}\\
+			L P\#I1.5 & \uline{将输入位 I1.5 的地址指针装入累加器 1}\\
+			LAR1 & \uline{将累加器 1 内容传送给地址寄存器 1}
+		\end{tabular}
+	\end{center}
+\end{ti}
+\end{document}

@@ -1,0 +1,513 @@
+\documentclass{article}
+%\linespread{1.3}
+\usepackage{ctex,hyperref,mathtools,upgreek,amsmath,mathrsfs,amsfonts,amssymb,graphicx}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{gr}{RGB}{0,120,2}
+%\newcommand*{\fenshu[1]}{\hfill\mbox{#1 分}}
+\usepackage[thmmarks]{ntheorem}
+{
+	\theoremstyle{nonumberplain}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\theoremsymbol{}%\mbox{$\blacksquare$}}
+	\newtheorem{solution}{\textcolor{gr}{解:}}
+}
+\title{《数学物理方法》样卷($1.01$)版}
+\author{\href{https://github.com/sikouhjw/jxust-Learning-database}{github}}
+\usepackage[a4paper,left=2cm,right=2cm,top=1cm,bottom=2cm]{geometry}
+\everymath{\displaystyle}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\,\mathrm{i}\,}
+\newcommand{\LL}{\mathscr{L}}
+\begin{document}
+	\maketitle
+	\begin{center}
+		\zihao{3} 样卷 $1$
+	\end{center}
+	\begin{flushleft}
+		一、填空题(每小题 $5$ 分, 共 $30$ 分)
+	\end{flushleft}
+	\begin{enumerate}
+		\item 函数 $f(x)=\ee^{-5x}$ 傅立叶变换为\underline{\hspace{8pc}}
+		
+		\item 函数 $f(t)=2$ 拉普拉斯变换为\underline{\hspace{8pc}}
+		
+		\item 稳定场方程的标准形式为: \underline{\hspace{8pc}}
+		
+		\item 定解问题分为\underline{\hspace{8pc}}、\underline{\hspace{8pc}}和\underline{\hspace{8pc}}
+		
+		\item 长为 $1$ 的均匀杆, 侧面绝缘, 一端温度为零, 另一端有恒定热流 $q$ 进入(即单位时间内通过单位截面积流入的热量为 $q$ ), 杆的初始温度分布是 $\frac{x(l-x)}{2}$ , 写出相应的定解问题: \underline{\hspace{8pc}}
+		
+		\item 本征值问题 $\begin{cases}
+		X''(x)+\lambda X(x)=0\\
+		\left. X_{x} \right|_{x=0}=0,\left. X_{x} \right|_{x=l}=0
+		\end{cases}$ 的本征值为: \underline{\hspace{6pc}}, 本征函数为: \underline{\hspace{6pc}}
+	\end{enumerate}
+
+    \begin{flushleft}
+    	二、求 $x''(t)+4x(t)=2\ee^t$ 满足条件 $x'(0)=x(0)=0$ , 在 $t>0$ 时的解. (本小题 $15$ 分)
+    \end{flushleft}
+
+    \begin{flushleft}
+    	三、求解初值问题:
+    \end{flushleft}
+    \begin{equation*}
+    	\begin{cases}
+    	u_{tt}=u_{xx} & (-\infty<x<+\infty)\\
+    	u|_{t=0}=x^2\\
+    	u_{t}|_{t=0}=1
+    	\end{cases}
+    \end{equation*}
+    (本小题 $15$ 分)
+    
+    \begin{flushleft}
+    	四、今有一弦, 其两端固定在 $x=0$ 和 $x=l$ 两处, 在开始的一瞬间, 它的形状是一条以 $x=\frac{l}{2}$ 点的铅垂线为对称轴的抛物线, 没有初速度. 其弦振动的规律可用以下定解问题描述:
+    \end{flushleft}
+    \begin{equation*}
+    	\begin{cases}
+    	u_{tt}-a^2 u_{xx}=0, & (0<x<l,t>0)\\
+    	u|_{x=0}=0,u|_{x=l}=0,\\
+    	u|_{t=0}=\frac{4h}{l^2}(l-x)x,u_{t}|_{t=0}=0
+    	\end{cases}
+    \end{equation*}
+    试用分离变量法解定解问题. (本小题 $20$ 分)
+    
+    \begin{flushleft}
+    	五、求解定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    	\begin{cases}
+    	\frac{\partial u}{\partial x}+\frac{\partial u}{\partial y}=0\\
+    	u|_{y=0}=8\ee^{2x}
+    	\end{cases}
+    \end{equation*}(本小题 $20$ 分)
+    \newpage
+    \begin{center}
+    	\zihao{3} 样卷 $1$ 答案
+    \end{center}
+    
+    \begin{flushleft}
+    	一、填空题(每小题 $5$ 分, 共 $30$ 分)
+    \end{flushleft}
+    \begin{enumerate}
+    	\item 函数 $f(x)=\ee^{-5x}$ 傅立叶变换为\underline{\hspace{1pc}$\frac{1}{5+\ii\omega}$\hspace{1pc}}
+    	
+    	\item 函数 $f(t)=2$ 拉普拉斯变换为\underline{\hspace{1pc}$\frac{2}{p}(\mathrm{Re}\,p>0)$}
+    	
+    	\item 稳定场方程的标准形式为: \underline{\hspace{1pc}$\triangle u=-h$\hspace{1pc}}
+    	
+    	\item 定解问题分为\underline{\hspace{1pc}初值问题\hspace{1pc}}、\underline{\hspace{1pc}边值问题\hspace{1pc}}和\underline{\hspace{1pc}混合问题\hspace{1pc}}
+    	
+    	\item 长为 $1$ 的均匀杆, 侧面绝缘, 一端温度为零, 另一端有恒定热流 $q$ 进入(即单位时间内通过单位截面积流入的热量为 $q$ ), 杆的初始温度分布是 $\frac{x(l-x)}{2}$ , 写出相应的定解问题:
+    	
+    	\underline{\hspace{1pc}$\begin{cases}
+    		u_{t}=a^2 u_{xx} & (0<x<l,t>0)\\
+    		u|_{t=0}=\frac{x(l-x)}{2} & (0\leqslant x\leqslant l)\\
+    		u|_{x=0}=0,ku_{x}|_{x=l}=q & (t>0)
+    		\end{cases}$\hspace{1pc}}
+    	
+    	\item 本征值问题 $\begin{cases}
+    	X''(x)+\lambda X(x)=0\\
+    	\left. X_{x} \right|_{x=0}=0,\left. X_{x} \right|_{x=l}=0
+    	\end{cases}$ 的本征值为: \underline{\hspace{1pc}$\lambda_{n}=\left( \frac{n\uppi}{l} \right)^2,n=1,2,3\ldots$\hspace{1pc}}, 本征函数为: \underline{\hspace{1pc}$X_{n}(x)=\cos\left( \frac{n\uppi}{l}x \right),n=1,2,3\ldots$\hspace{1pc}}
+    \end{enumerate}
+    
+    \begin{flushleft}
+    	二、求 $x''(t)+4x(t)=2\ee^t$ 满足条件 $x'(0)=x(0)=0$ , 在 $t>0$ 时的解. (本小题 $15$ 分)
+    \end{flushleft}
+    \begin{solution}
+    	%\begin{2}
+    		方程两端对变量 $t$ 取拉氏变换, 得\hfill$\cdots\cdots2$分
+    	%\end{2}
+
+    		\begin{equation*}
+    			p^2 \LL[x(t)]+4\LL[x(t)]=\frac{2}{p-1} \tag*{$\cdots\cdots3$分}
+    		\end{equation*}
+        	故: $\LL[x(t)]=\frac{2}{(p-1)(p^2+4)}=\frac{2}{5}\left( \frac{1}{p-1}-\frac{p}{p^2+4}-\frac{1}{p^2+4} \right)$\hfill$\cdots\cdots5$分\\
+        	故: $x(t)=\LL^{-1}\left[ \frac{2}{5}\left( \frac{1}{p-1}-\frac{p}{p^2+4}-\frac{1}{p^2+4} \right) \right]$\hfill$\cdots\cdots2$分
+        
+
+        	\begin{equation*}
+        		x(t)=\frac{1}{5}H(t)\left( 2\ee^t-2\cos 2t-\sin 2t \right) \tag*{$\cdots\cdots3$ 分}
+        	\end{equation*}
+        	
+
+    \end{solution}
+    
+    \begin{flushleft}
+    	三、求解初值问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}=u_{xx} & (-\infty<x<+\infty)\\
+    u|_{t=0}=x^2\\
+    u_{t}|_{t=0}=1
+    \end{cases}
+    \end{equation*}
+    (本小题 $15$ 分)
+    \begin{solution}
+    	由达朗贝尔公式:
+
+    		\begin{equation*}
+    			u=\frac{1}{2}[\varphi(x+at)+\varphi(x-at)]+\frac{1}{2a}\int_{x-at}^{x+at}\psi(\xi)\dd\xi\tag*{$\cdots\cdots5$分}
+    		\end{equation*}
+        	\begin{equation*}
+        		\varphi(x)=u|_{t=0}=x^2;\psi(x)=u_{t}|_{t=0}=1\tag*{$\cdots\cdots3$分}
+        	\end{equation*}
+        	得: $u=\frac{1}{2}\left[ (x+t)^2+(x-t)^2 \right]+\frac{1}{2}\int_{x-t}^{x+t}1\dd \xi$\hfill$\cdots\cdots2$分
+    \begin{equation*}
+    	u=x^2+t^2+t\tag*{$\cdots\cdots5$分}
+    \end{equation*}
+    \end{solution}
+    
+    \begin{flushleft}
+    	四、今有一弦, 其两端固定在 $x=0$ 和 $x=l$ 两处, 在开始的一瞬间, 它的形状是一条以 $x=\frac{l}{2}$ 点的铅垂线为对称轴的抛物线, 没有初速度. 其弦振动的规律可用以下定解问题描述:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}-a^2 u_{xx}=0,(0<x<l,t>0)\\
+    u|_{x=0}=0,u|_{x=l}=0,\\
+    u|_{t=0}=\frac{4h}{l^2}(l-x)x,u_{t}|_{t=0}=0
+    \end{cases}
+    \end{equation*}
+    试用分离变量法解定解问题. (本小题 $20$ 分)
+    \begin{solution}
+    	先求满足方程和边界条件得解. 设解为
+    		\begin{equation*}
+    			u(x,t)=X(x)T(t)\tag*{$\cdots\cdots2$分}
+    		\end{equation*}
+        代入方程得
+        \begin{equation*}
+        	X(x)T''(t)=a^2 X''(x)T(t)
+        \end{equation*}
+        除以 $a^2 X(x)T(t)$ 有
+        	\begin{equation*}
+        		\frac{X''(x)}{X(x)}=\frac{T''(t)}{a^2 T(t)}=-\lambda\tag*{$\cdots\cdots2$分}
+        	\end{equation*}
+        得到两个常微分方程
+        	\begin{align*}
+        		X''(x)+\lambda X(x)&=0\\
+        		T''(t)+\lambda a^2 T(t)&=0\tag*{$\cdots\cdots2$分}
+        	\end{align*}
+        本征值问题为
+        \begin{equation*}
+        	\begin{cases}
+        	X''(x)+\lambda X(x)=0\\
+        	X(0)=0,X(l)=0
+        	\end{cases}
+        \end{equation*}
+        故本征值
+        \begin{equation*}
+        	\lambda=\lambda_{n}=\left[ \frac{n\uppi}{l} \right]^2,n=1,2,\ldots\tag*{$\cdots\cdots2$分}
+        \end{equation*}
+        相应的本征函数为
+        \begin{equation*}
+        	X_{n}(x)=\sin\frac{n\uppi}{l}x\tag*{$\cdots\cdots2$分}
+        \end{equation*}
+        方程 $T''(t)+\left( \frac{n\uppi a}{l} \right)^2 T(t)=0$ , 通解为
+        \begin{equation*}
+        	T_{n}(t)=C_{n}\cos\frac{n\uppi a}{l}t+D_{n}\sin\frac{n\uppi a}{l}t\tag*{$\cdots\cdots2$分}
+        \end{equation*}
+        利用解的叠加原理, 可得满足方程和边界条件的级数形式解
+        \begin{equation*}
+        	u(x,t)=\sum_{n=0}^{\infty}\left( C_{n}\cos\frac{n\uppi a}{l}t+D_{n}\sin\frac{n\uppi a}{l}t \right)\sin\frac{n\uppi}{l}x \tag*{$\cdots\cdots1$分}
+        \end{equation*}
+        由初始条件 $u_{t}|_{t=0}$ , 得 $D_{n}=0$ ,\hfill$\cdots\cdots2$分\\
+        由 $u|_{t=0}=\frac{4h}{l^2}(l-x)x$ 得 $u(x,0)=\sum_{n=1}^{\infty}C_{n}\sin\frac{n\uppi}{l}x$
+        \begin{equation*}
+        	C_{n}=\frac{2}{l}\int_{0}^{l}\frac{4h}{l^2}(l-\zeta)\zeta\sin\frac{n\uppi}{l}\zeta\dd\zeta=\frac{16h}{n^3\uppi^3}(1-\cos n\uppi),n=1,2,\ldots\tag*{$\cdots\cdots2$分}
+        \end{equation*}
+        于是:
+        \begin{equation*}
+        	u(x,t)=\sum_{k=0}^{\infty}\frac{32h}{(2k+1)^3\uppi^3}\cos\frac{(2k+1)\uppi at}{l}\sin\frac{(2k+1)\uppi x}{l}\tag*{$\cdots\cdots3$分}
+        \end{equation*}
+    \end{solution}
+    
+    \begin{flushleft}
+    	五、求解定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    \frac{\partial u}{\partial x}+\frac{\partial u}{\partial y}=0\\
+    u|_{y=0}=8\ee^{2x}
+    \end{cases}
+    \end{equation*}(本小题 $20$ 分)
+    \begin{solution}
+    	设解为
+    	\begin{equation*}
+    		u(x,t)=X(x)Y(y)\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	代入方程得
+    	\begin{equation*}
+    		\frac{X'(x)}{X(x)}=\frac{Y'(y)}{-Y(y)}=\lambda\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	即:
+    	\begin{align*}
+    		X'(x)-\lambda X(x)&=0\\
+    		Y'(y)+\lambda Y(y)&=0\tag*{$\cdots\cdots4$分}
+    	\end{align*}
+    	其解分别为
+    	\begin{align*}
+    		X(x)&=c_1\ee^{\lambda x}\\
+    		Y(y)&=c_2\ee^{-\lambda y}\tag*{$\cdots\cdots2$分}
+    	\end{align*}
+    	通解为
+    	\begin{equation*}
+    		u(x,y)=c\ee^{\lambda x-\lambda y}\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	由
+    	\begin{equation*}
+    		u|_{y=0}=8\ee^{2x}\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	得
+    	\begin{equation*}
+    		c=8,\lambda=2\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	于是
+    	\begin{equation*}
+    		u(x,y)=8\ee^{2x-2y}\tag*{$\cdots\cdots4$分}
+    	\end{equation*}
+    \end{solution}
+    \newpage
+    \begin{center}
+    	\zihao{3} 样卷 $2$
+    \end{center}
+    \begin{flushleft}
+    	一、填空题(每小题 $5$ 分, 共 $30$ 分)
+    \end{flushleft}
+    \begin{enumerate}
+    	\item 函数 $f(x)=\ee^{-x}$ 傅立叶变换为\underline{\hspace{8pc}}
+    	
+    	\item 函数 $f(t)=t^2$ 拉普拉斯变换为\underline{\hspace{8pc}}
+    	
+    	\item 有一个均匀杆, 只要杆中任意一段有纵向位移或速度, 必导致相邻段的压缩或伸长, 这种伸缩继续, 就会有纵波沿着杆传播. 该杆的杨氏模量为 $E$ ; 密度为 $\rho$ ; 单位长度的杆沿杆长方向所受的外力为 $F$ . 该杆的纵振动方程为\underline{\hspace{8pc}}
+    	
+    	\item 三类典型的数学物理方程分别为\underline{\hspace{8pc}}、\underline{\hspace{8pc}}和\underline{\hspace{8pc}}
+    	
+    	\item 长为 $1$ 两端固定的弦作振幅极其微小的横振动, 写出其定解条件: \underline{\hspace{8pc}}
+    	
+    	\item 本征值问题 $\begin{cases}
+    	X''(x)+\lambda X(x)=0\\
+    	\left. X \right|_{x=0}=0,\left. X \right|_{x=l}=0
+    	\end{cases}$ 的本征值为: \underline{\hspace{6pc}}, 本征函数为: \underline{\hspace{6pc}}
+    \end{enumerate}
+    
+    \begin{flushleft}
+    	二、求 $x''(t)+x(t)=\ee^t$ 满足条件 $x'(0)=x(0)=0$ , 在 $t>0$ 时的解. (本小题 $15$ 分)
+    \end{flushleft}
+    
+    \begin{flushleft}
+    	三、求解初值问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}-a^2u_{xx}=0 & (-\infty<x<+\infty)\\
+    u(x,0)=\cos x\\
+    u_{t}(x,0)=\ee^{-1}
+    \end{cases}
+    \end{equation*}
+    (本小题 $15$ 分)
+    
+    \begin{flushleft}
+    	四、长为 $l$ 的杆, 一端固定, 另一端受力 $F_{0}$ 而伸长. 细杆在放手后的振动规律可表示为定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}-a^2 u_{xx}=0, & (0<x<l,t>0)\\
+    u|_{x=0}=0,u_{x}|_{x=l}=0,\\
+    u|_{t=0}=\frac{F_{0}}{YS}x,u_{t}|_{t=0}=0
+    \end{cases}
+    \end{equation*}
+    试用分离变量法解定解问题. (本小题 $20$ 分)
+    
+    \begin{flushleft}
+    	五、求解定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    3\frac{\partial u}{\partial x}+2\frac{\partial u}{\partial y}=0\\
+    u|_{y=0}=4\ee^{-x}
+    \end{cases}
+    \end{equation*}(本小题 $20$ 分)
+    
+    \newpage
+    \begin{center}
+    	\zihao{3} 样卷 $2$ 答案
+    \end{center}
+    \begin{flushleft}
+    	一、填空题(每小题 $5$ 分, 共 $30$ 分)
+    \end{flushleft}
+    \begin{enumerate}
+    	\item 函数 $f(x)=\ee^{-x}$ 傅立叶变换为\underline{\hspace{1pc}$\frac{1}{1+\ii\omega}$\hspace{1pc}}
+    	
+    	\item 函数 $f(t)=t^2$ 拉普拉斯变换为\underline{\hspace{1pc}$\frac{2}{p^3}(\mathrm{Re}\, p>0)$\hspace{1pc}}
+    	
+    	\item 有一个均匀杆, 只要杆中任意一段有纵向位移或速度, 必导致相邻段的压缩或伸长, 这种伸缩继续, 就会有纵波沿着杆传播. 该杆的杨氏模量为 $E$ ; 密度为 $\rho$ ; 单位长度的杆沿杆长方向所受的外力为 $F$ . 该杆的纵振动方程为\underline{\hspace{1pc}$u_{tt}=a^2 u_{xx}+f\quad\left[ a^2=\frac{E}{\rho},f=\frac{F(x,t)}{\rho} \right]$\hspace{1pc}}
+    	
+    	\item 三类典型的数学物理方程分别为\underline{\hspace{1pc}波动方程\hspace{1pc}}、\underline{\hspace{1pc}输运方程\hspace{1pc}}和\underline{\hspace{1pc}稳定场方程\hspace{1pc}}
+    	
+    	\item 长为 $1$ 两端固定的弦作振幅极其微小的横振动, 写出其定解条件: \underline{\hspace{1pc}$\begin{cases}
+    		u|_{x=0}=0\\
+    		u|_{x=l}=0
+    		\end{cases}\begin{cases}
+    		u|_{t=0}=\varphi(x)\\
+    		u_{t}|_{t=0}=\psi(x)
+    		\end{cases}$}
+    	
+    	\item 本征值问题 $\begin{cases}
+    	X''(x)+\lambda X(x)=0\\
+    	\left. X \right|_{x=0}=0,\left. X \right|_{x=l}=0
+    	\end{cases}$ 的本征值为: \underline{\hspace{1pc}$\lambda_{n}=\left( \frac{n\uppi}{l} \right)^2,n=1,2,3\ldots$\hspace{1pc}}, 本征函数为: \underline{\hspace{1pc}$X_{n}(x)=\sin\left( \frac{n\uppi}{l}x \right),n=1,2,3\ldots$\hspace{1pc}}
+    \end{enumerate}
+    
+    \begin{flushleft}
+    	二、求 $x''(t)+x(t)=\ee^t$ 满足条件 $x'(0)=x(0)=0$ , 在 $t>0$ 时的解. (本小题 $15$ 分)
+    \end{flushleft}
+    \begin{solution}
+    	方程两端对变量 $t$ 取拉氏变换, 得\hfill$\cdots\cdots2$分
+    	\begin{equation*}
+    		p^2 \LL[x(t)]+\LL[x(t)]=\frac{1}{p-1}\tag*{$\cdots\cdots3$分}
+    	\end{equation*}
+    	故: $\LL[x(t)]=\frac{1}{(p-1)\left(p^2+1\right)}=\frac{1}{2}\left( \frac{1}{p-1}-\frac{p}{p^2+1}-\frac{1}{p^2+1} \right)$\hfill$\cdots\cdots5$分\\
+    	故: $x(t)=\LL^{-1}\left[ \frac{1}{2}\left( \frac{1}{p-1}-\frac{p}{p^2+1}-\frac{1}{p^2+1} \right) \right]$\hfill$\cdots\cdots2$分
+    	\begin{equation*}
+    		x(t)=\frac{1}{2}H(t)\left( \ee^t-\cos t-\sin t \right)\tag*{$\cdots\cdots3$分}
+    	\end{equation*}
+    \end{solution}
+    
+    \begin{flushleft}
+    	三、求解初值问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}-a^2u_{xx}=0 & (-\infty<x<+\infty)\\
+    u(x,0)=\cos x\\
+    u_{t}(x,0)=\ee^{-1}
+    \end{cases}
+    \end{equation*}
+    (本小题 $15$ 分)
+    \begin{solution}
+    	由达朗贝尔公式:
+    	\begin{equation*}
+    	u=\frac{1}{2}[\varphi(x+at)+\varphi(x-at)]+\frac{1}{2a}\int_{x-at}^{x+at}\psi(\xi)\dd\xi\tag*{$\cdots\cdots5$分}
+    	\end{equation*}
+    	\begin{equation*}
+    		\varphi(x)=u(x,0)=\cos x;\psi(x)=u_{t}(x,0)=\ee^{-1}\tag*{$\cdots\cdots3$分}
+    	\end{equation*}
+    	得: $u=\frac{1}{2}[\cos(x+at)+\cos(x-at)]+\frac{1}{2a}\int_{x-at}^{x+at}\ee^{-1}\dd\xi$\hfill$\cdots\cdots2$分
+    	\begin{equation*}
+    		u=\cos x\cos(at)+\frac{1}{\ee}t\tag*{$\cdots\cdots5$分}
+    	\end{equation*}
+    \end{solution}
+    
+    
+    \begin{flushleft}
+    	四、长为 $l$ 的杆, 一端固定, 另一端受力 $F_{0}$ 而伸长. 细杆在放手后的振动规律可表示为定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    u_{tt}-a^2 u_{xx}=0, & (0<x<l,t>0)\\
+    u|_{x=0}=0,u_{x}|_{x=l}=0,\\
+    u|_{t=0}=\frac{F_{0}}{YS}x,u_{t}|_{t=0}=0
+    \end{cases}
+    \end{equation*}
+    试用分离变量法解定解问题. (本小题 $20$ 分)
+    \begin{solution}
+    	先求满足方程和边界条件得解. 设解为
+    	\begin{equation*}
+    	u(x,t)=X(x)T(t)\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	代入方程得
+    	\begin{equation*}
+    		X(x)T''(t)=a^2 X''(x)T(t)
+    	\end{equation*}
+    	除以 $a^2 X(x)T(t)$ 有
+    	\begin{equation*}
+    		\frac{X''(x)}{X(x)}=\frac{T''(t)}{a^2 T(t)}=-\lambda\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	得到两个常微分方程
+    	\begin{align*}
+    		X''(x)+\lambda X(x)&=0\\
+    		T''(t)+\lambda a^2 T(t)&=0\tag*{$\cdots\cdots2$分}
+    	\end{align*}
+    	本征值问题为
+    	\begin{equation*}
+    		\begin{cases}
+    		X''(x)+\lambda X(x)=0,\\
+    		X(0)=0,X'(l)=0
+    		\end{cases}
+    	\end{equation*}
+    	故本征值
+    	\begin{equation*}
+    		\lambda=\lambda_{n}=\left[ \frac{(2n+1)\uppi}{2l} \right]^2,n=0,1,2,\ldots\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	相应的本征函数为
+    	\begin{equation*}
+    		X_{n}(x)=\sin\frac{(2n+1)\uppi}{2l}x\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	方程 $T''(t)+\left[ \frac{(2n+1)\uppi a}{2l} \right]^2 T(t)=0$ , 通解为
+    	\begin{equation*}
+    		T_{n}(t)=C_{n}\cos\frac{(2n+1)\uppi a}{2l}t+D_{n}\sin\frac{(2n+1)\uppi a}{2l}t\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	利用解的叠加原理, 可得满足方程和边界条件的级数形式解
+    	\begin{equation*}
+    		u(x,t)=\sum_{n=0}^{\infty}\left( C_{n}\cos\frac{(2n+1)\uppi a}{2l}t+D_{n}\sin\frac{(2n+1)\uppi a}{2l}t \right)\sin\frac{(2n+1)\uppi}{2l}x\tag*{$\cdots\cdots1$分}
+    	\end{equation*}
+    	由初始条件 $u_{t}|_{t=0}=0$ , 得 $D_{n}=0$\hfill$\cdots\cdots2$分\\
+    	由 $u|_{t=0}=\frac{F_{0}}{YS}x$ , 得 $u(x,0)=\sum_{n=1}^{\infty}C_{n}\sin\frac{(2n+1)\uppi}{2l}x$
+    	\begin{equation*}
+    		C_{n}=\frac{2}{l}\int_{0}^{l}\frac{F_{0}}{YS}\zeta\sin\frac{(2n+1)\uppi}{2l}\zeta\dd\zeta=\frac{8F_{0}l}{YS\uppi^2}\frac{(-1)^n}{(2n+1)^2},n=0,1,2,\ldots\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	于是:
+    	\begin{equation*}
+    		u(x,t)=\frac{8F_{0}l}{YS\uppi^2}\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)^2}\cos\frac{(2n+1)\uppi at}{2l}\sin\frac{(2n+1)\uppi x}{2l}\tag*{$\cdots\cdots3$分}
+    	\end{equation*}
+    \end{solution}
+    
+    \begin{flushleft}
+    	五、求解定解问题:
+    \end{flushleft}
+    \begin{equation*}
+    \begin{cases}
+    3\frac{\partial u}{\partial x}+2\frac{\partial u}{\partial y}=0\\
+    u|_{y=0}=4\ee^{-x}
+    \end{cases}
+    \end{equation*}(本小题 $20$ 分)
+    \begin{solution}
+    	设解为
+    	\begin{equation*}
+    		u(x,t)=X(x)Y(y)\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	代入方程得
+    	\begin{equation*}
+    		\frac{X'(x)}{X(x)}=\frac{Y'(y)}{-\frac{3}{2}Y(y)}=-\lambda\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	即:
+    	\begin{align*}
+    		X'(x)-\lambda X(x)&=0\\
+    		Y'(y)+\frac{3}{2}\lambda Y(y)&=0\tag*{$\cdots\cdots4$分}
+    	\end{align*}
+    	其解分别为
+    	\begin{align*}
+    		X(x)&=c_{1}\ee^{\lambda x}\\
+    		Y(y)&=c_{2}\ee^{-\frac{3}{2}\lambda y}\tag*{$\cdots\cdots2$分}
+    	\end{align*}
+    	通解为
+    	\begin{equation*}
+    		u(x,y)=c\ee^{\lambda x-\frac{3}{2}\lambda y}\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	由
+    	\begin{equation*}
+    		u|_{y=0}=4\ee^{-x}\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	得
+    	\begin{equation*}
+    		c=4,\lambda=-1\tag*{$\cdots\cdots2$分}
+    	\end{equation*}
+    	于是
+    	\begin{equation*}
+    		u(x,y)=4\ee^{-x+\frac{3}{2}y}\tag*{$\cdots\cdots4$分}
+    	\end{equation*}
+    \end{solution}
+\end{document}
