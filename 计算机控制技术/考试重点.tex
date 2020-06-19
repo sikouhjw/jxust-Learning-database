@@ -1,0 +1,548 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[zihao=-4
+]{ctexart}% twocolumn,
+\usepackage[paperwidth=10cm,paperheight=16cm,margin=0.5cm]{geometry}
+% \usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{unicode-math}
+\setmainfont{Fira Sans}
+\setmathfont{Fira Math}
+% \usepackage{ifxetex,ifluatex}
+% \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+%   % \usepackage[T1]{fontenc}
+%   % \usepackage[utf8]{inputenc}
+%   % \usepackage{textcomp} % provide euro and other symbols
+% \else % if luatex or xetex
+%   \usepackage{unicode-math}
+%   \defaultfontfeatures{Scale=MatchLowercase}
+%   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+% \fi
+% Use upquote if available, for straight quotes in verbatim environments
+% \usepackage{sourceserifpro,sourcesanspro}
+% \setmainfont{Source Sans Pro}
+\setCJKmainfont{Source Han Sans CN}
+\setCJKsansfont{Source Han Sans CN}
+% \usepackage{newpxmath}
+\pagestyle{empty}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={《计算机控制技术》考试重点},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{《计算机控制技术》考试重点}
+\author{sikouhjw}
+\date{2020-05-30}
+
+\begin{document}\sffamily
+\maketitle
+
+% {
+% \setcounter{tocdepth}{3}
+% \tableofcontents
+% }
+\hypertarget{header-n2}{%
+\section{前言}\label{header-n2}}
+
+17级电气《计算机控制技术》考试重点
+
+\hypertarget{header-n4}{%
+\section{题型分布}\label{header-n4}}
+
+\begin{itemize}
+\item
+  填空题，10题*2分
+\item
+  选择题，10题*2分
+\item
+  简答题，10分/2题
+\item
+  作图题，10分
+
+  \begin{itemize}
+  \item
+    分布在第二、三章
+  \item
+    第二象限的
+  \end{itemize}
+\item
+  程序设计题
+
+  \begin{itemize}
+  \item
+    ADC0809
+  \item
+    单片机
+  \item
+    PC/ISA 总线
+  \item
+    第四次作业设计题
+  \item
+    实验课
+  \item
+    要具体的把地址给出来
+  \end{itemize}
+\item
+  计算题
+
+  \begin{itemize}
+  \item
+    分布在第四章
+
+    \begin{itemize}
+    \item
+      有无纹波
+    \item
+      计算相应的数字量控制器
+    \end{itemize}
+  \item
+    直线插补考第二象限
+  \item
+    看作业
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{header-n48}{%
+\section{知识点}\label{header-n48}}
+
+\hypertarget{header-n49}{%
+\subsection{P2}\label{header-n49}}
+
+计算机控制系统的工作原理：
+
+\begin{itemize}
+\item
+  实时数据采集
+\item
+  实时控制决策
+\item
+  实时控制输出
+\end{itemize}
+
+\hypertarget{header-n58}{%
+\subsection{P4}\label{header-n58}}
+
+常用的计算机控制系统主机：
+
+\begin{itemize}
+\item
+  可编程序控制器（PLC）
+\item
+  工控机（IPC）
+\item
+  嵌入式控制器（MPU）
+\item
+  嵌入式微控制器（MCU）
+\end{itemize}
+
+\hypertarget{header-n69}{%
+\subsection{P6}\label{header-n69}}
+
+计算机控制系统的典型型式
+
+\begin{itemize}
+\item
+  直接数字控制系统（DDC）
+\item
+  监督控制系统（SCC）
+\end{itemize}
+
+\hypertarget{header-n76}{%
+\subsection{P7}\label{header-n76}}
+
+集散控制系统（DCS），也叫分布式控制系统，采用分散控制、集中控制、分级管理、分而自治和综合协调的方法，把系统从上到下分为现场设备级、分散控制级、集中监控级、综合管理级，形成分级分布式控制。
+
+\hypertarget{header-n78}{%
+\subsection{P8}\label{header-n78}}
+
+现场总线控制系统（FCS）是新一代分布式控制系统，其结构如图 1-8 所示。DCS
+的结构模式为：“操作站——控制站——现场仪表”三层结构，系统成本较高，而且各厂商的
+DCS 有各自的标准，不能互联。FCS 与 DCS
+不同，它的结构模式为：“工作站——现场总线智能仪表”两层结构，FCS
+用二层结构完成了 DCS
+中的三层结构功能，降低了成本，提高了可靠性，可实现真正的开放式互连系统结构。
+
+由企业资源信息管理系统（ERP）、生产执行系统（MES）和生产过程控制系统（PCS）构成的三层结构，已成为综合自动化系统的整体解决方案。
+
+\hypertarget{header-n81}{%
+\subsection{P14}\label{header-n81}}
+
+接口是计算机与外部设备交换信息的桥梁，它包括输入接口和输出接口。
+
+过程通道是在计算机和生产过程之间设置的信息转送和转换的连接通道。
+
+所谓总线，就是计算机各模块之间互联和传送信息（指令、地址和数据）的一组信号线。
+
+\hypertarget{header-n85}{%
+\subsection{P21}\label{header-n85}}
+
+RS-232C：RS-232C 采用负逻辑规定逻辑电平，\(-15\sim-3\,\mathrm{V}\)
+为逻辑“1”电平，\(+3\sim+15\,\mathrm{V}\) 为逻辑“0”电平。
+
+\hypertarget{header-n87}{%
+\subsection{P24}\label{header-n87}}
+
+I/O
+端口地址译码电路信号：在译码过程中，译码电路不仅与地址信号有关，而且与控制信号有关。它把地址和控制信号进行组合，产生对芯片或端口的选择信号。
+
+\hypertarget{header-n89}{%
+\subsection{P25}\label{header-n89}}
+
+图 2-4 与设计题联系到一起去。
+
+\hypertarget{header-n91}{%
+\subsection{P30}\label{header-n91}}
+
+数字量输入接口与通道主要由输入调理电路、输入接口、输入口地址译码电路等组成。
+
+\hypertarget{header-n93}{%
+\subsection{P31}\label{header-n93}}
+
+小功率输入调理电路：为了清除由于触点的机械抖动而产生的振荡信号，一般都应加入有较长时间常数的积分电路来消除这种振荡。
+
+\begin{itemize}
+\item
+  图 2-12a 所示为一种简单的、采用积分电路消除开关抖动的方法。
+\item
+  图 2-12b 所示为 R-S 触发器消除开关两次反跳的方法。
+\end{itemize}
+
+\hypertarget{header-n100}{%
+\subsection{P32}\label{header-n100}}
+
+数字量输出通道主要由输出锁存器、输出驱动电路、输出口地址译码电路等组成。
+
+\hypertarget{header-n102}{%
+\subsection{P33}\label{header-n102}}
+
+模拟量输入接口与过程通道的组成：\\
+模拟量输入通道一般由 I/V 变换，多路转换器、采样保持器、A-D
+转换器、接口及控制逻辑等组成。
+
+\begin{itemize}
+\item
+  信号调理电路主要是通过非电量的转换、信号的变换、放大、滤波、线性化、共模抑制及隔离等方法，将非电量和非标准的电信号转换成标准的电信号。信号调理电路是传感器和
+  A-D 之间以及 D-A 和执行机构之间的桥梁，也是测控系统中重要的组成部分。
+\item
+  I/V 变换：变送器输出的信号为 \(0\sim10\,\mathrm{mA}\) 或
+  \(4\sim20\,\mathrm{mA}\) 的统一信号，需要经过 I/V
+  变换变成电压信号后才能处理。
+\item
+  多路转换器又称多路开关，是用来切换模拟电压信号的关键元件。
+\item
+  为了提高模拟量输入信号的频率范围，以适应某些随时间变化较快的信号的要求，可采用带有保持电路的采样器，即采样保持器。
+\end{itemize}
+
+\hypertarget{header-n113}{%
+\subsection{P38}\label{header-n113}}
+
+所谓量化，就是采用一组数码（如二进制码）来逼近离散模拟信号的幅值，将其转换为数字信号。将采样信号转换为数字信号的过程称为量化过程，执行量化动作的装置是
+A-D 转换器。字长为 \(n\) 的 A-D 转换器把 \(y_{\min}\sim y_{\max}\)
+范围内变化的采样信号变换为数字
+\(0\sim 2^n - 1\)，其最低有效位（LSB）所对应的模拟量 \(q\)
+称为量化单位。
+\[q = \frac{y_{\max}- y_{\min}}{2^n-1}\]
+
+\hypertarget{header-n115}{%
+\subsection{P39}\label{header-n115}}
+
+允许转换的正弦波模拟信号的最大频率
+
+\hypertarget{header-n117}{%
+\subsection{P40}\label{header-n117}}
+
+ADC0809
+
+\begin{itemize}
+\item
+  第四次作业设计题
+\item
+  引脚的作用、怎么来的、怎么编程
+\item
+  看书例题
+\end{itemize}
+
+\hypertarget{header-n126}{%
+\subsection{P45}\label{header-n126}}
+
+DAC0832 将输入的数字量转换成差动的电流输出\ldots\ldots{}
+
+\hypertarget{header-n128}{%
+\subsection{P46}\label{header-n128}}
+
+单极性与双极性电压输出电路
+
+\hypertarget{header-n130}{%
+\subsection{P64}\label{header-n130}}
+
+所谓串模干扰是指叠加在被测信号上的干扰噪声。
+
+串模干扰的抑制方法：\ldots\ldots{}
+
+\begin{itemize}
+\item
+  填空题/选择题
+\end{itemize}
+
+\hypertarget{header-n136}{%
+\subsection{P65}\label{header-n136}}
+
+所谓共模干扰是指模数转换器两个输入端上公有的干扰电压。
+
+共模干扰的抑制方法
+
+\begin{itemize}
+\item
+  变压器隔离
+\item
+  光电隔离
+\item
+  浮地隔离
+\item
+  采用仪表放大器提高共模抑制比
+\end{itemize}
+
+共模抑制比的计算
+
+长线传输干扰及其抑制方法：\ldots\ldots{}
+
+\hypertarget{header-n150}{%
+\subsection{P78}\label{header-n150}}
+
+数控系统一般由数控装置、驱动装置、可编程序控制器和检测装置等。
+
+数控装置能接收零件图样加工要求的信息，进行插补运算，实时地向各坐标轴发出速度控制指令。驱动装置能快速响应数控装置发出的指令，驱动机床各坐标轴运动，同时能提供足够的功率和扭矩。调节控制是数控装置发出运动的指令信号，驱动装置快速响应跟踪指令信号。检测装置将坐标的实际值检测出来，反馈给数控装置的调节电路中的比较器，有差值就发出运动控制信号，从而实现偏差控制。数控装置包括输入装置、输出装置、控制器和插补器
+4 部分，这些功能都由计算机来完成。
+
+\hypertarget{header-n153}{%
+\subsection{P79}\label{header-n153}}
+
+数控系统按控制方式来分类，可以分为点位控制、直线削控制和轮廓切削控制。
+
+\hypertarget{header-n155}{%
+\subsection{P84}\label{header-n155}}
+
+直线插补考第二象限的插补，圆弧插补
+
+\begin{itemize}
+\item
+  例 3-1
+\item
+  画表格、画图
+\end{itemize}
+
+\hypertarget{header-n163}{%
+\subsection{P96}\label{header-n163}}
+
+步进电动机又叫脉冲电动机，它是一种将电脉冲信号转换为角位移的机电式数模（D-A）转换器。
+
+齿距角、步距角
+
+\hypertarget{header-n166}{%
+\subsection{P98}\label{header-n166}}
+
+对于三相步进电动机则有单相三拍（简称单三拍）方式、双相三拍（简称双三拍）方式、三相六拍工作方式。
+
+\hypertarget{header-n168}{%
+\subsection{P99}\label{header-n168}}
+
+三相六拍控制方式输出字表
+
+\hypertarget{header-n170}{%
+\subsection{P114}\label{header-n170}}
+
+将 \(D(s)\) 离散化为 \(D(z)\)
+
+\begin{itemize}
+\item
+  双线性变换法
+\item
+  后向差分法
+\item
+  前向差分法
+\end{itemize}
+
+\hypertarget{header-n179}{%
+\subsection{P116}\label{header-n179}}
+
+设计由计算机实现的控制算法
+
+数字 PID 控制器的设计
+
+\hypertarget{header-n182}{%
+\subsection{P117}\label{header-n182}}
+
+比例控制\ldots\ldots{}
+
+数字 PID 位置型控制算式
+
+数字 PID 增量型控制算式
+
+将公式中各符号的意义写出来
+
+\hypertarget{header-n187}{%
+\subsection{P119}\label{header-n187}}
+
+积分项的改进
+
+\begin{itemize}
+\item
+  积分分离
+\item
+  抗积分饱和
+\item
+  梯形积分
+\end{itemize}
+
+微分项的改进
+
+\begin{itemize}
+\item
+  不完全微分 PID 控制算法
+\item
+  微分先行 PID 控制算式
+\item
+  时间最优 PID 控制
+\item
+  带死区的 PID 控制算法
+\end{itemize}
+
+\hypertarget{header-n206}{%
+\subsection{P123}\label{header-n206}}
+
+数字 PID 控制器的参数整定
+
+\hypertarget{header-n208}{%
+\subsection{P131}\label{header-n208}}
+
+数字控制器的设计
+
+一般来说，针对\ldots\ldots{}
+
+有无纹波的设计
+
+\begin{itemize}
+\item
+  例 4-1
+\item
+  例 4-2
+\item
+  作业
+\end{itemize}
+
+\hypertarget{header-n219}{%
+\subsection{P136}\label{header-n219}}
+
+这一面的文字看一下
+
+\hypertarget{header-n221}{%
+\subsection{P139}\label{header-n221}}
+
+比较例 4-1\ldots\ldots{}
+
+施密斯预估控制原理是：\ldots\ldots{}
+
+\hypertarget{header-n224}{%
+\subsection{P141}\label{header-n224}}
+
+达林算法设计的目标
+
+\hypertarget{header-n226}{%
+\subsection{P142}\label{header-n226}}
+
+振铃现象及其消除
+
+\begin{itemize}
+\item
+  作业
+\item
+  两种方法
+
+  \begin{itemize}
+  \item
+    消除振铃因子法
+  \item
+    参数选择法
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{header-n238}{%
+\subsection{P230}\label{header-n238}}
+
+测量数据预处理技术
+
+\begin{itemize}
+\item
+  记住其子标题
+\end{itemize}
+
+\hypertarget{header-n243}{%
+\subsection{P233}\label{header-n243}}
+
+标度变换
+
+\hypertarget{header-n245}{%
+\subsection{P242}\label{header-n245}}
+
+A/D、D/A 转换
+
+\begin{itemize}
+\item
+  字长
+\item
+  分辨率
+\item
+  作业
+\item
+  测试
+\end{itemize}
+
+\hypertarget{header-n256}{%
+\subsection{P244}\label{header-n256}}
+
+软件抗干扰技术
+
+\begin{itemize}
+\item
+  数字滤波技术
+\item
+  开关量的软件抗干扰技术
+\item
+  指令冗余技术
+\item
+  软件陷阱技术
+\end{itemize}
+
+\hypertarget{header-n267}{%
+\subsection{P246}\label{header-n267}}
+
+平均值滤波\ldots\ldots{}
+
+开关量信号输入/输出抗干扰措施
+
+\end{document}
