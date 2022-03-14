@@ -1,0 +1,173 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\pagestyle{plain}
+\usepackage{ntheorem,siunitx}
+{
+\theoremstyle{plain}
+\theoremheaderfont{\bfseries}
+\theorembodyfont{\normalfont}
+\newtheorem{ti}{}[section]
+}
+\renewcommand{\theti}{\arabic{ti}.}
+\ctexset{
+	section={
+		format={\Large\bfseries\raggedright},
+		name={,、},
+		number=\chinese{section},
+		aftername={\hspace{0pt}},
+	}
+}
+\setCJKmainfont[Mapping = fullwidth-stop]{SourceHanSerifCN-Regular}
+\usepackage{hyperref}
+\def\kuo{\mbox{(\hspace{1pc})}}
+\def\hua#1{\CJKunderline*[hidden = true]{占#1位}}
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{1.96cm}}}\texttt{A}.~#1 & \texttt{B}.~#2 & \texttt{C}.~#3 & \texttt{D}.~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{3.92cm}}}\texttt{A}.~#1 & \texttt{B}.~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{3.92cm}}}\texttt{C}.~#3 & \texttt{D}.~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\\texttt{A}.~#1 \\ \texttt{B}.~#2 \\ \texttt{C}.~#3 \\ \texttt{D}.~#4}  % 四行
+\title{《发电厂变电站综合自动化》2019-2020 考试卷\thanks{试卷编号：1920100610 A}}
+\author{\url{https://github.com/sikouhjw/jxust-Learning-database} \and \url{https://gitee.com/sikouhjw/jxust-Learning-database}}
+\begin{document}
+	\maketitle
+	\section{不定项选择题（每小题 2 分，共 20 分，错选、漏选均不得分）}
+	\begin{ti}
+		自动准同期装置的功能不包括如下哪条：\kuo。
+		\onech{调整待并发电机电压的频率}{调整待并发电机电压的幅值}{调整待并发电机电压的初相角}{调整发变组变压器的分接头}
+	\end{ti}
+	
+	\begin{ti}
+		与正弦整步电压最小值所对应的相角差一定等于 \kuo。
+		\fourch{$0^\circ$}{$90^\circ$}{$180^\circ$}{$270^\circ$}
+	\end{ti}
+
+	\begin{ti}
+		下列同步发电机励磁系统可以实现无刷励磁的是 \kuo。
+		\twoch{交流励磁系统}{直流励磁系统}{静止励磁系统}{自并励系统}
+	\end{ti}
+
+	\begin{ti}
+		电机励磁系统在下列哪种情况下需要进行强行励磁 \kuo。
+		\twoch{发电机内部故障时}{升压变压器故障时}{正常停机时}{故障快速恢复时}
+	\end{ti}
+
+	\begin{ti}
+		自动励磁调节器的强励倍数一般取 \kuo。
+		\twoch{$2 \sim 2.5$}{$2.5 \sim 3$}{$1.2 \sim 1.6$}{$1.6 \sim 2.0$}
+	\end{ti}
+
+	\begin{ti}
+		在励磁调节器中，若电压测量采用 12 相桥式整流电路，则选频滤波电路的滤波频率应选为 \kuo{} \si{Hz}。
+		\fourch{600}{1200}{300}{50}
+	\end{ti}
+
+	\begin{ti}
+		SCADA 的作用是：\kuo。
+		\onech{潮流计算}{系统状态估计}{实时运行数据的收集与处理}{稳定计算}
+	\end{ti}
+
+	\begin{ti}
+		关于发电机无功调节特性，下列说法正确的是：\kuo。
+		\onech{一般情况下，该特性对应一条下倾的直线}{调差系数是该特性的重要表征参数}{一般情况下，该特性对应一条水平的直线}{调差系数是该特性的唯一表征参数}
+	\end{ti}
+
+	\begin{ti}
+		关于发电机无功调节特性，下列说法正确的是：\kuo。
+		\onech{无功调节特性反映发电机端电压与输出无功电流的关系}{无功调节特性反映发电机励磁电流与输出无功电流的关系}{无功调节特性就是调压器的工作特性}{无功调节特性是调压器、励磁机和发电机工作特性的合成}
+	\end{ti}
+
+	\begin{ti}
+		低频减载装置中系统最大功率缺额是如何计算的？\kuo。
+		\onech{按系统中断开最大容量的机组来考虑}{按断开发电厂高压母线来考虑}{按系统解列后各区最大缺额之和来考虑}{按三相故障的短路容量来考虑}
+	\end{ti}
+
+	\section{判断题（对的用“Y”表示，错的用“N”表示，每小题 2 分，共 20 分）}
+	\begin{ti}
+		自动准同期并列的特点是首先发电机投入电网，然后加励磁电流。
+	\end{ti}
+
+	\begin{ti}
+		电压响应比用于描述励磁绕组磁场的建立速度。
+	\end{ti}
+
+	\begin{ti}
+		自并励励磁系统可以消除电刷的。
+	\end{ti}
+
+	\begin{ti}
+		在微机型励磁调节器中，一般采用比例微分积分控制控制算法。
+	\end{ti}
+
+	\begin{ti}
+		自动低频减载装置是用来解决严重有功功率缺额事故的重要措施之一。
+	\end{ti}
+
+	\begin{ti}
+		利用频率偏差的积分作为输入量来调频的方式能够对频率的变化反应灵敏。
+	\end{ti}
+
+	\begin{ti}
+		电力系统调度采用的安全分析方法是预想事故分析。
+	\end{ti}
+
+	\begin{ti}
+		正调差系数，有利于维持稳定运行。
+	\end{ti}
+
+	\begin{ti}
+		按各发电设备耗量微增率不相等的原则分配负荷最经济，即等耗量微增率则。
+	\end{ti}
+
+	\begin{ti}
+		主导发电机法调频，调频过程较快，最终不存在频率偏差。
+	\end{ti}
+
+	\section{填空题（每小题 2 分，共 10 分）}
+	\begin{ti}
+		由于并列操作为正常运行操作，冲击电流最大瞬时值限制在 \hua{1-2} 倍额定电流以下为宜。
+	\end{ti}
+
+	\begin{ti}
+		发电机空载电势决定于励磁电流，改变 \hua{励磁} 电流就可影响同步发电机在电力系统中的运行特性。
+	\end{ti}
+
+	\begin{ti}
+		直流励磁机励磁系统是过去常用的一种励磁方式：限于 \hua{换相} 制约，通常只在 $10$ 万 \si{kW} 以下机组中采用。
+	\end{ti}
+
+	\begin{ti}
+		有差调频法各调频器机组最终负担的计划外负荷与其调差系数成 \hua{反} 比。
+	\end{ti}
+
+	\begin{ti}
+		调频承担电力系统频率的 \hua{二} 次调节任务。
+	\end{ti}
+
+	\section{简答题（每小题 5 分，共 20 分）}
+	\begin{ti}
+		同步发电机励磁自动调节的主要作用有哪些？
+	\end{ti}
+
+	\begin{ti}
+		同步发电机自动准同期的理想条件。
+	\end{ti}
+
+	\begin{ti}
+		简述励磁系统对电力系统静态稳定性的影响。
+	\end{ti}
+
+	\begin{ti}
+		试简述低频对电力系统的危害。
+	\end{ti}
+
+	\section{计算与分析题（每小题 10 分，共 30 分）}
+	\begin{ti}
+		某电厂有两台发电机在公共母线上并联运行，一号机组的额定功率为 \SI{25}{MW}，二号机组的额定功率为 \SI{50}{MW}，两台机组的功率因数都是 \num{0.85}，励磁调节器的调差系数都是 \num{0.05}。若系统无功负荷波动使电厂无功的增量为它们总无功容量的 \SI{20}{\percent}，问各机组承担的无功增量是多少？母线上的电压波动是多少？（设母线额定电压为 $U$）
+	\end{ti}
+
+	\begin{ti}
+		某系统的用户总功率为 $P_{\mathrm{fhe}} = \SI{2800}{MW}$，系统最大的功率缺额 $P_{\mathrm{qe}} = \SI{900}{MW}$，负荷调节效应系数 $K_{L^{*}} = 2$，自动减负荷动作后，希望恢复频率值 $f_{\mathrm{hf}} = \SI{48}{Hz}$，求接入减负荷装置的负荷总功率 $P_{\mathrm{JH}}$。
+	\end{ti}
+
+	\begin{ti}
+		某电力系统，与频率无关的负荷占 \SI{40}{\percent}，与频率一次方成比例的负荷占 \SI{30}{\percent}，与频率二次方成比例的负荷占 \SI{10}{\percent}，与频率三次方成比例的负荷占 \SI{20}{\percent}。求系统频率由 \SI{50}{Hz} 下降到 \SI{48}{Hz} 时，负荷功率变化的百分数及其相应的 $K_{L^{*}}$ 值。
+	\end{ti}
+\end{document}

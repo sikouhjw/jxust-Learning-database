@@ -1,0 +1,67 @@
+\documentclass{ctexart}
+\usepackage{amsmath,amssymb,physics,upgreek}
+\let\lvert\relax\let\rvert\relax\let\lVert\relax\let\rVert\relax
+\usepackage{fourier}
+\usepackage{siunitx}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginpar=2pc]{geometry}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{theorem}
+{
+	\theoremstyle{change}
+	\theoremheaderfont{\bfseries}
+	\theorembodyfont{\normalfont}
+	\newtheorem{ti}{}[section]
+}
+\renewcommand{\theti}{\arabic{ti}.}
+\renewcommand{\labelenumi}{(\theenumi)}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	colorlinks=true,
+	pdfauthor={电气 173 秦舒雅},
+	pdftitle={《电力电子技术》题库整合版}
+}
+% \AfterEndEnvironment{ti}{\marginpar{\rule{5pc}{4pt}}}
+% \def\hua#1{\uline{\phantom{#1}}\marginpar{\tiny #1}}
+% \def\hua#1{ \uline{$\blacktriangle$}\marginpar{\zihao{8} #1} }
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+% \def\hua#1{ \uline{$\blacktriangle$} }
+\def\hua#1{~\uline{#1}~}
+\def\huahua#1{ \underline{#1} }
+\def\kuo#1{\mbox{(\hspace{1pc})}\marginpar{(\texttt{#1})}}
+\def\dui{\mbox{(\hspace{1pc})}\marginpar{($\checkmark$)}}
+\def\cuo{\mbox{(\hspace{1pc})}\marginpar{($\times$)}}
+\newcommand{\fourch}[4]{\\\begin{tabular}{*{4}{@{}p{4.195cm}}}(\texttt{A})~#1 & (\texttt{B})~#2 & (\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}} % 一行
+\newcommand{\twoch}[4]{\\\begin{tabular}{*{2}{@{}p{8.39cm}}}(\texttt{A})~#1 & (\texttt{B})~#2\end{tabular}\\\begin{tabular}{*{2}{@{}p{8.39cm}}}(\texttt{C})~#3 & (\texttt{D})~#4\end{tabular}}  %两行
+\newcommand{\onech}[4]{\\(\texttt{A})~#1 \\ (\texttt{B})~#2 \\ (\texttt{C})~#3 \\ (\texttt{D})~#4}  % 四行
+\setCJKmainfont[Mapping=fullwidth-stop]{SourceHanSerifCN-Regular}
+\def\V{\text{V\textsubscript{11}}}
+\def\mm{\text{m}}
+\def\ii{\mathrm{i}}
+\def\oo{\mathrm{o}}
+\def\HH{\mathrm{H}}
+\def\LL{\mathrm{L}}
+\def\GG{\mathrm{G}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\title{《电力电子技术》题库整合版}
+\author{秦舒雅}
+\usepackage{subfiles}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\subfile{选择题.tex}
+	\subfile{填空题.tex}
+	\subfile{判断题.tex}
+	\subfile{名词解释.tex}
+	\subfile{画图题.tex}
+	\subfile{简答题.tex}
+	\subfile{分析计算题.tex}
+	\subfile{计算题.tex}
+\end{document}
